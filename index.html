@@ -7,8 +7,8 @@
         if (!document.cookie) {
             window.location.href = "login.html";
         } else {
-            var cookie = document.cookie.split("=");
-            var user = cookie[1];
+            let cookie = document.cookie.split("=");
+            let user = cookie[1];
             alert("welcome to the website, " + user)
         }
     </script>

@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
     $("#passwordInput").keypress(function (event) {
         let key = (event.keyCode ? event.keyCode : event.which);
         if (key == '13') {
@@ -9,19 +10,24 @@ $(document).ready(function () {
 });
 
 function formCheck(form) {
-    if (form.username.value == "admin" && form.password.value == "admin") {
-        setCookie(form.username.value);
-        window.location.href = "index.html"
-    }
-    else {
-        alert("Error Password or Username")
-    }
+    const formUser = form.username.value;
+    const formPass = form.password.value;
+    $.getJSON("accounts.json", function (json) {
+        const userList = json.users;
+        for (let i = 0; i < userList.length; i++) {
+            if (formUser == json.users[i].username && formPass == json.users[i].password) {
+                setCookie(formUser);
+                window.location.href = "index.html"
+            }
+        }
+
+    });
 }
 
 function setCookie(username) {
-    var d = new Date();
-    var exmins = 1;
+    let d = new Date();
+    let exmins = 1;
     d.setTime(d.getTime() + (exmins * 60 * 1000));
-    var expires = "expires=" + d.toUTCString() + ";";
+    let expires = "expires=" + d.toUTCString() + ";";
     document.cookie = "username=" + username + ";" + expires;
 }
