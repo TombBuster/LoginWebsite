@@ -10,6 +10,10 @@
 
 
 <style>
+    body {
+        background: wheat;
+    }
+
     .loginContainer {
         display: flex;
         flex-direction: column;
@@ -51,6 +55,14 @@
         background: cyan;
 
     }
+
+    a:link {
+        color: white
+    }
+
+    a:visited {
+        color: white
+    }
 </style>
 
 <body>
@@ -60,6 +72,7 @@
             <input type="text" name="username" placeholder="Username..." />
             <input id="passwordInput" type="password" name="password" placeholder="Password..." />
             <input type="button" id="loginButton" onclick="formCheck(this.form)" value="Login" />
+            <a href="register.html">Not got an account? Click here to sign up</a>
         </form>
     </div>
 

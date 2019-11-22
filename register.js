@@ -4,7 +4,7 @@ $(document).ready(function () {
     $("#password2Input").keypress(function (event) {
         let key = (event.keyCode ? event.keyCode : event.which);
         if (key == '13') {
-            $("#loginButton").click();
+            $("#registerButton").click();
         }
     });
 });

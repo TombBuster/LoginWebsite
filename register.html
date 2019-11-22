@@ -10,6 +10,10 @@
 
 
 <style>
+    body {
+        background: wheat;
+    }
+
     .registerContainer {
         display: flex;
         flex-direction: column;
@@ -49,7 +53,14 @@
     #registerButton {
         width: 40%;
         background: cyan;
+    }
 
+    a:link {
+        color: white
+    }
+
+    a:visited {
+        color: white
     }
 </style>
 
@@ -61,6 +72,7 @@
             <input id="passwordInput" type="password" name="password1" placeholder="Password..." required />
             <input id="password2Input" type="password" name="password2" placeholder="Retype password..." required />
             <input type="button" id="registerButton" onclick="formCheck(this.form)" value="Register" required />
+            <a href="login.html">Already got an account? Click here to login</a>
         </form>
     </div>
 

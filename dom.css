@@ -1,0 +1,79 @@
+body {
+    background: url("background-blue.jpg") no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: White;
+}
+
+h2 {
+    color: white;
+    font-size: 50;
+    text-align: center;
+    font-family: fantasy;
+}
+
+ul {
+    color: white;
+    font-size: large;
+    font-family: monospace;
+    text-align: center;
+}
+
+li {
+    color: white;
+    font-size: large;
+    font-family: monospace;
+    text-align: center;
+}
+
+.buttonFlex {
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.buttonStyle {
+    padding: 1%;
+    border: 2px solid red;
+    border-radius: 5px;
+    background: cyan;
+
+}
+
+.hidden {
+    display:none;
+}
+
+div.box{
+    display: inline-block;
+    top: 400px;
+    width: 100px;
+    height: 100px;
+    background: url("dom.jpg");
+    position: relative;
+}
+
+div.animation{
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation {
+    0%   {
+        border-radius: 0%;
+        top: 400px;
+        }
+    50%  {
+        border-radius: 100%;
+        top: 600px;
+        }
+    100% {
+        border-radius: 0%;
+        top: 400px;
+        }
+}

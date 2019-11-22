@@ -7,8 +7,23 @@
         },
         {
             "id": 1,
-            "username": "test1",
-            "password": "test2"
+            "username": "tom",
+            "password": "bennett"
+        },
+        {
+            "id": 2,
+            "username": "dom",
+            "password": "sharples"
+        },
+        {
+            "id": 3,
+            "username": "ivor",
+            "password": "leith"
+        },
+        {
+            "id": 4,
+            "username": "tom",
+            "password": "macsweeney"
         }
     ]
 }

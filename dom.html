@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Sharple's Secret Site</title>
+    <link rel="stylesheet" type="text/css" href="dom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="dom.js"></script>
+</head>
+
+<script>
+    if (!document.cookie) {
+        window.location.href = "login.html";
+    } else {
+        let cookie = document.cookie.split("=");
+        let user = cookie[1];
+        if (user != "dom") {
+            window.location.href = "index.html";
+        }
+    }
+</script>
+
+<body>
+
+    <h1 id='heading'>The Dom-ain</h1>
+    <div class="buttonFlex">
+        <button class="buttonStyle" type="button" id='everybodyWasPlayVideo'>Fighting</button>
+        <button class="buttonStyle" type="button" id='hackerPlayVideo'>Work</button>
+        <button class="buttonStyle" type="button" id='ondraPlayVideo'>Climbing</button>
+    </div>
+    <h2> Dangerous Abilities</h2>
+    <p>
+
+
+        <li>Knows React</li>
+
+    </p>
+
+    <div style="margin-left: 5%" id="box0" class='box'></div>
+    <div id="box1" class='box'></div>
+    <div id="box2" class='box'></div>
+    <div id="box3" class='box'></div>
+    <div id="box4" class='box'></div>
+    <div id="box5" class='box'></div>
+    <div id="box6" class='box'></div>
+    <div id="box7" class='box'></div>
+    <div id="box8" class='box'></div>
+    <div id="box9" class='box'></div>
+    <div id="box10" class='box'></div>
+    <div id="box11" class='box'></div>
+    <div id="box12" class='box'></div>
+
+
+    <iframe class='hidden' id='everybodyWas' width="500" height="250"
+        src="https://www.youtube.com/embed/MpczbjAqvXI?autoplay=1&mute=1&controls=0" frameborder="0"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    <iframe class='hidden' id='hacker' width="500" height="250"
+        src="https://www.youtube.com/embed/7jj15F6vNIA?version=3&autoplay=1&mute=1&controls=0&loop=1&playlist=7jj15F6vNIA"
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    <iframe class='hidden' id='ondra' width="500" height="250"
+        src="https://www.youtube.com/embed/7Xmx2gYwsYo?version=3&autoplay=1&mute=1&controls=0&loop=1&playlist=7jj15F6vNIA"
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+</body>
+
+</html>
