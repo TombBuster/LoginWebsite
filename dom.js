@@ -6,7 +6,8 @@ $(document).ready(function () {
 
     }
 
-    isVideo = false;
+   
+
 
     $("button#everybodyWasPlayVideo").click(function () {
         $("iframe#everybodyWas").toggleClass("hidden");

@@ -27,8 +27,19 @@ ul {
 li {
     color: white;
     font-size: large;
+    font-weight: bolder;
     font-family: monospace;
     text-align: center;
+}
+
+em {
+    color: black;
+    font-size: 40;
+    text-transform: uppercase;
+}
+
+iframe {
+    margin-left: 270px
 }
 
 .buttonFlex {
@@ -50,7 +61,7 @@ li {
 
 div.box{
     display: inline-block;
-    top: 400px;
+    top: 0px;
     width: 100px;
     height: 100px;
     background: url("dom.jpg");
@@ -66,14 +77,14 @@ div.animation{
 @keyframes animation {
     0%   {
         border-radius: 0%;
-        top: 400px;
+        top: 0px;
         }
     50%  {
         border-radius: 100%;
-        top: 600px;
+        top: 200px;
         }
     100% {
         border-radius: 0%;
-        top: 400px;
+        top: 0px;
         }
 }
