@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>
+        Login page
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="login.js"></script>
+</head>
+
+
+<style>
+    .loginContainer {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin-left: 25%;
+        margin-top: 10%;
+        border: black;
+        border-radius: 5px;
+        width: 50%;
+        background: url("background-blue.jpg");
+    }
+
+    .loginHeader {
+        text-align: center;
+        font-size: 20;
+        padding: 1%;
+        background-color: grey;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .loginForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
+    }
+
+    input {
+        padding: 2%;
+        margin: 5%;
+        width: 70%;
+        border: none;
+        border-radius: 5px;
+    }
+
+    #loginButton {
+        width: 40%;
+        background: cyan;
+
+    }
+</style>
+
+<body>
+    <div class="loginContainer">
+        <div class=loginHeader>Login</div>
+        <form class="loginForm" name="login">
+            <input type="text" name="username" placeholder="Username..." />
+            <input id="passwordInput" type="password" name="password" placeholder="Password..." />
+            <input type="button" id="loginButton" onclick="formCheck(this.form)" value="Login" />
+        </form>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
