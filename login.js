@@ -12,16 +12,22 @@ $(document).ready(function () {
 function formCheck(form) {
     const formUser = form.username.value;
     const formPass = form.password.value;
-    $.getJSON("accounts.json", function (json) {
-        const userList = json.users;
-        for (let i = 0; i < userList.length; i++) {
-            if (formUser == json.users[i].username && formPass == json.users[i].password) {
-                setCookie(formUser);
-                window.location.href = "index.html"
-            }
+    $.getJSON("accounts.json", function (existingJson) {
+        localStorage.setItem('userAccounts', JSON.stringify(existingJson))
+    })
+    let json = JSON.parse(localStorage.getItem('userAccounts'))
+    const userList = json.users;
+    isUser = false;
+    for (let i = 0; i < userList.length; i++) {
+        if (formUser == json.users[i].username && formPass == json.users[i].password) {
+            isUser = true;
+            setCookie(formUser);
+            window.location.href = "index.html"
         }
-
-    });
+    }
+    if (!isUser) {
+        alert("Username or password is incorrect.")
+    }
 }
 
 function setCookie(username) {
